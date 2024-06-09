@@ -1,6 +1,9 @@
+import dotenv from "dotenv"
+dotenv.config()
+
 async function GET(c: any) {
   return c.json({
-    name: "Hono",
+    name: process.env.APP_NAME,
     version: "4.4.4",
     router: "./src/router/route.ts",
   });
