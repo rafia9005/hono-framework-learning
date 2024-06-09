@@ -1,10 +1,11 @@
 import { Hono } from "hono";
 const router = new Hono();
 
-import {Home} from "../controller/Controller"
+import {GET, POST} from "../controller/Controller"
 
 
-router.get("/", Home);
+router.get("/", GET);
+router.post("/", POST)
 
 export default router;
 
