@@ -1,11 +1,10 @@
 import { Hono } from "hono";
 const router = new Hono();
 
-router.get("/", (c) => {
-  return c.json({
-    test: "test"
-  });
-});
+import {Home} from "../controller/Controller"
+
+
+router.get("/", Home);
 
 export default router;
 
